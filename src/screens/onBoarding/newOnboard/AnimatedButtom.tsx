@@ -101,7 +101,7 @@ const AnimatedButton: React.FC<CustomButtonProps> = ({
           flatListRef.current?.scrollToEnd();
         }}>
         <Animated.View style={[styles.skipContainer, skipAnimStyle]}>
-          <Text style={styles.skipText}>SkipS</Text>
+          <Text style={styles.skipText}>Skip</Text>
 
           {/* <ArrowRight2 size={18} color="#1B1B1B" style={{marginTop: 4}} /> */}
         </Animated.View>
