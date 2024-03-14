@@ -6,10 +6,15 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 import styles from './style';
+import {SCREENS} from '..';
 // import Login from '../login';
+// eslint-disable-next-line react-hooks/rules-of-hooks
 
 const WelcomeScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -22,8 +27,10 @@ const WelcomeScreen = () => {
           /> */}
         </View>
         <View style={styles.welcomeTextStyle}>
-          <Text style={styles.welcomeText}>Welcome to the app</Text>
-          <TouchableOpacity onPress={() => {}} style={styles.startButton}>
+          <Text style={styles.welcomeText}>Welcome to the Tirupati</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.SIGN_IN)}
+            style={styles.startButton}>
             <Text style={styles.getStarted}>Get Started</Text>
           </TouchableOpacity>
         </View>
