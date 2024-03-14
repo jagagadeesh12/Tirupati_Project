@@ -1,80 +1,89 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# icons
 
-# Getting Started
+Signinscreen icons
+<SmsTracking size="32" color="#FF8A65"/>
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Homescreen icons
+<NotificationBing size="32" color="#FF8A65"/>
+<ExportSquare size="32" color="#FF8A65"/>
+<ImportSquare size="32" color="#FF8A65"/>
+<Clock size="32" color="#FF8A65"/>
+<Calendar size="32" color="#FF8A65"/>
 
-## Step 1: Start the Metro Server
+bottom sheet icons
+<Home2 size="32" color="#FF8A65"/>
+(time sheet and feed both are png)
+<Calendar size="32" color="#FF8A65"/>
+<ProfileCircle size="32" color="#FF8A65"/>
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+feed screen icons
+<Like1 size="32" color="#FF8A65"/>
+<Message size="32" color="#FF8A65"/>
+<More size="32" color="#FF8A65"/>
+<Repeat size="32" color="#FF8A65"/>
+<Add size="32" color="#FF8A65"/>
+<Save2 size="32" color="#FF8A65"/>
 
-To start Metro, run the following command from the _root_ of your React Native project:
+notification screen icons
+<ArrowLeft2 size="32" color="#FF8A65"/>
+<NotificationBing size="32" color="#FF8A65"/>
+notification screen popup icon
+<Trash size="32" color="#FF8A65"/>
+<VolumeCross size="32" color="#FF8A65"/>
 
-```bash
-# using npm
-npm start
+profile scren icons
+<Moon size="32" color="#FF8A65"/>
+<Book size="32" color="#FF8A65"/>
+<Receipt21 size="32" color="#FF8A65"/>
+<Designtools size="32" color="#FF8A65"/>
+<MessageQuestion size="32" color="#FF8A65"/>
+<LogoutCurve size="32" color="#FF8A65"/>
 
-# OR using Yarn
-yarn start
-```
+create feed screen icons
+<Camera size="32" color="#FF8A65"/>
+<Gallery size="32" color="#FF8A65"/>
+<CloseSquare size="32" color="#FF8A65"/>
 
-## Step 2: Start your Application
+create feed screen popup icons
+<Global size="32" color="#FF8A65"/>
+(remaining two HR GROUP & LEADERSHIP icons are pngs)
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+comment screen icons
+<Send size="32" color="#FF8A65"/>
+<ArrowDown2 size="32" color="#FF8A65"/>
 
-### For Android
+personal info screen icon
+<Personalcard size="32" color="#FF8A65"/>
+<Lock1 size="32" color="#FF8A65"/>
+<Call size="32" color="#FF8A65"/>
+<Briefcase size="32" color="#FF8A65"/>
+<Location size="32" color="#FF8A65"/>
 
-```bash
-# using npm
-npm run android
+adressinfo screen icons
+<Note1 size="32" color="#FF8A65"/>
 
-# OR using Yarn
-yarn android
-```
+holidays screen icons
+<Note1 size="32" color="#FF8A65"/>
+<Cake size="32" color="#FF8A65"/>
 
-### For iOS
+birthdays screen icons
+<MedalStar size="32" color="#FF8A65"/>
 
-```bash
-# using npm
-npm run ios
+timesheet screen icons
+<BrifecaseTimer size="32" color="#FF8A65"/>
 
-# OR using Yarn
-yarn ios
-```
+timesheet3 screen icons
+<ArrangeHorizontalSquare size="32" color="#FF8A65"/>
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Steps to run this project
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+1)npm run schema:download -- --header='Authorization: Bearer <token>'  
+2)npm run generate
 
-## Step 3: Modifying your App
+then npm run android or ios
 
-Now that you have successfully run the app, let's modify it.
+# Tirupati
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+# Tirupati_Project
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
 # Tirupati_Project

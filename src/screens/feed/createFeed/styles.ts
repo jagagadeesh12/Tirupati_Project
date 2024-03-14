@@ -1,0 +1,120 @@
+import {Dimensions, StyleSheet} from 'react-native';
+import {APP_COLOR} from '../../../types/Colors';
+const dimensions = Dimensions.get('window');
+const imageWidth = 92 * (dimensions.width / 375);
+const styles = StyleSheet.create({
+  buttons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    marginVertical: 16,
+    marginTop:-5,
+  },
+  activeText: {
+    backgroundColor: APP_COLOR.PrimaryColor,
+  },
+  cancel: {
+    color: APP_COLOR.text,
+    fontSize: 16,
+    fontWeight: '400',
+  },
+  post: {
+    fontSize: 10,
+    fontWeight: '500',
+    backgroundColor: APP_COLOR.CPBcolor,
+    color: 'white',
+    width: 56,
+    height: 24,
+    textAlign: 'center',
+    padding: 4,
+    borderRadius: 5.58,
+  },
+  AllgroupImage: {
+    flexDirection: 'row',
+    marginHorizontal: 20,
+  },
+  AllGroups: {
+    borderWidth: 1,
+    borderColor: APP_COLOR.CPBcolor,
+    width: imageWidth,
+    height: 24,
+    marginHorizontal: 8,
+    borderRadius: 12,
+    marginVertical: 10,
+    alignItems: 'center',
+    padding: 3,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
+  text: {
+    fontSize: 10,
+    fontWeight: '400',
+    color: APP_COLOR.PrimaryColor,
+  },
+  EnterText: {
+    marginHorizontal: 20,
+    marginVertical: 5,
+  },
+  modalContainer: {
+    marginTop: 540,
+    backgroundColor: APP_COLOR.cards,
+    width: 390,
+    height: 215,
+    borderTopRightRadius: 25,
+    borderTopLeftRadius: 24,
+  },
+  modalContent: {},
+  closeText: {},
+  IconsFlex: {
+    flexDirection: 'row',
+    marginLeft: 20,
+    margin: 13,
+  },
+  ChooseAudience: {
+    marginHorizontal: 20,
+    marginVertical: 20,
+    textAlign: 'center',
+    color: APP_COLOR.text,
+    fontsize: 16,
+    fontWeight: '400',
+  },
+  IconText: {
+    fontSize: 16,
+    fontWeight: '400',
+    color: APP_COLOR.text,
+    marginHorizontal: 10.5,
+  },
+  CameraImg: {
+    borderWidth: 1,
+    width: 96,
+    height: 72,
+    alignItems: 'center',
+    padding: 22,
+    borderColor: APP_COLOR.PrimaryColor,
+    borderRadius: 8,
+  },
+  GalleryImag: {
+    borderWidth: 1,
+    width: 96,
+    height: 72,
+    marginHorizontal: 8,
+    alignItems: 'center',
+    padding: 22,
+    borderColor: APP_COLOR.PrimaryColor,
+    borderRadius: 8,
+  },
+  ImagesFlex: {
+    flexDirection: 'row',
+    marginHorizontal: 20,
+    marginTop: 140,
+    top: 230,
+  },
+  GalleryText: {
+    color: APP_COLOR.PrimaryColor,
+    fontWeight: '400',
+    fontSize: 10,
+  },
+  selectedImageContainer: {},
+  selectedImage: {},
+});
+export default styles;
