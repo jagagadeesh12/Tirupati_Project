@@ -1,63 +1,81 @@
-/* eslint-disable react-native/no-inline-styles */
-import {View, Text, Image, KeyboardAvoidingView, Platform} from 'react-native';
+import {View, Text, Image, SafeAreaView, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {Button, InputField} from '../../components';
 import styles from './styles';
-import {useSignIn} from '../../hooks';
-import PopupModal from './PopupModal';
-import CustomButtonScreen from '../../components/CustomButton';
+import {CustomCheckbox} from '../../components';
+import ButtonLoader from '../../components/ButtonLoader';
+import InputText from '../../components/InputText';
+import {useNavigation} from '@react-navigation/native';
+import {SCREENS} from '..';
 
 const SignIn = () => {
-  const {
-    onSignIn,
-    error,
-    email,
-    onChangeText,
-    isEmailSent,
-    isLoading,
-    isDisableButton,
-  } = useSignIn();
+  const navigation = useNavigation();
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'position'}>
-      <View style={styles.container}>
-        <Image
-          source={require('../../assets/images/welcomeimage.png')}
-          resizeMode="contain"
-          style={styles.image}
-        />
-        <View style={{flex: 1}}>
-          <Text style={styles.welcomeText}>Hello !</Text>
-          <Text style={styles.subText}>
-            Get a magic link to sign in instantly!
-          </Text>
-
-          <InputField
-            title="Email"
-            placeholder="Your Email Address"
-            onChangeText={onChangeText}
-            isError={error.length > 0}
-            error={error}
-          />
-        </View>
-        <View style={{opacity: !isDisableButton ? 0.5 : 1}}>
-          {/* <Button
-            text="Sign In"
-            onPress={onSignIn}
-            isDisabled={!isDisableButton}
-            loading={isLoading}
-          /> */}
-          <CustomButtonScreen
-            label={'Sign In'}
-            onPress={onSignIn}
-            enabled={isDisableButton}
-            loading={isLoading}
-          />
+    <SafeAreaView style={{flex: 1}}>
+      <View style={{flex: 1}}>
+        <View style={styles.container}>
+          <View style={{alignItems: 'center', flexDirection: 'column'}}>
+            <Image
+              source={require('../../assets/images/tptLogo.png')}
+              style={styles.logoStyle}
+            />
+            {/* <Text style={styles.loginText}>Login</Text> */}
+          </View>
+          <View style={{marginTop: 40}}>
+            <Text style={styles.emailText}>Email</Text>
+            <InputText
+              placeholder={'Enter your email'}
+              handleOnchange={function (e: string): void {}}
+              keyboardType="email-address"
+              value={''}
+            />
+            <Text style={styles.emailText}>Password</Text>
+            <InputText
+              placeholder={'Enter your password'}
+              handleOnchange={function (e: string): void {}}
+              keyboardType="default"
+              value={''}
+            />
+          </View>
+          <View style={styles.viewStyle}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingTop: 8,
+              }}>
+              <CustomCheckbox
+                isChecked={false}
+                onChange={function (checked: boolean): void {}}
+                disabled={false}
+              />
+              <Text style={styles.remeberText}>Remember me </Text>
+            </View>
+            <TouchableOpacity
+              onPress={() => navigation.navigate(SCREENS.FORGOT_PASSWORD)}>
+              <Text style={styles.forgetPassword}>Forget Password?</Text>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.BOTTOM_TAB_SCREENS)}>
+            <View style={{marginTop: 25, marginHorizontal: 20}}>
+              <ButtonLoader label={'Login'} onPress={function (): void {}} />
+            </View>
+          </TouchableOpacity>
+          {/* <View style={styles.viewStyle}>
+            <View style={styles.viewLine} />
+            <Text style={styles.Or}>OR</Text>
+            <View style={styles.viewLine} />
+          </View> */}
         </View>
       </View>
-      <PopupModal email={email} isEmailSent={isEmailSent} />
-    </KeyboardAvoidingView>
+      <View style={styles.signUpView}>
+        <Text style={styles.accountText}>Don't have an account?</Text>
+        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.SIGN_UP)}>
+          <Text style={styles.signUpText}>Sign Up</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 

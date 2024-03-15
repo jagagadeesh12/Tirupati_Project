@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '400',
     color: '#0074B7',
-    paddingTop: 8,
+    paddingTop: 8
   },
   viewLine: {
     height: 2,
