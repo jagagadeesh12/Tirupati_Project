@@ -28,7 +28,6 @@ const CustomButtonScreen = ({
   return (
     <TouchableOpacity
       onPress={handlePress}
-      
       ref={inputRef}
       style={[
         styles.Button,

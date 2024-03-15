@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {View, TextInput, Text, FlatList, TouchableOpacity} from 'react-native';
 import styles from './style';
-import BackHeader from '../backHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 const AddSkillType = ({navigation}: any) => {
