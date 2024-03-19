@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {SCREENS, SignIn, SignUp, WelcomeScreen} from '../screens';
+import BottomTab from '../../src/navigation/bottomTab';
 import ForgotPassword from '../screens/ForgotPassword';
 import ResetPassword from '../screens/ResetPassword';
 import BottomTab from '../../src/navigation/bottomTab';
