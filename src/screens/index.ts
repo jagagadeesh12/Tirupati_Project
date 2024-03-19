@@ -14,8 +14,7 @@ export {default as SignIn} from './signIn';
 export {default as Loader} from './loader';
 export {default as WelcomeScreen} from './welcom';
 export {default as SignUp} from './SignUP';
-// export {default as ForgotPassword} from './ForgotPassword';
-// export {default as ResetPassword} from './ResetPassword';
+
 export {default as Feed} from './Feed';
 
 export const SCREENS: {[key: string]: never} = {
@@ -42,11 +41,6 @@ export const PRE_LOGIN_STACK: IListOfScreens[] = [
   //   name: SCREENS.ONBOARD,
   //   component: OnBoard,
   // },
-
-  {
-    name: SCREENS.WELCOME_SCREENS,
-    component: WelcomeScreen,
-  },
   {
     name: SCREENS.SIGN_IN,
     component: SignIn,
@@ -63,10 +57,10 @@ export const PRE_LOGIN_STACK: IListOfScreens[] = [
     name: SCREENS.RESET_PASSWORD,
     component: ResetPassword,
   },
-  {
-    name: SCREENS.EVENT,
-    component: Events,
-  },
+  // {
+  //   name: SCREENS.EVENT,
+  //   component: Events,
+  // },
   {
     name: SCREENS.LOADER,
     component: Loader,

@@ -1,6 +1,5 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text} from 'react-native';
 import React from 'react';
-import {NotificationBing} from 'iconsax-react-native';
 
 import Avatar from '../atom/avatar';
 import {IAppHeader} from '../../types';
@@ -25,7 +24,6 @@ const AppHeader = ({
   return (
     <View style={styles.AppHeader}>
       <View style={styles.AppHeaderStyles}>
-        {/* <TouchableOpacity onPress={onPressProfile}> */}
         <Avatar
           imageSource={updatedUrl}
           width={40}

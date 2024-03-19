@@ -4,7 +4,7 @@ import InputText from '../../components/InputText';
 import ButtonLoader from '../../components/ButtonLoader';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
-import { SCREENS } from '..';
+import {SCREENS} from '..';
 
 const SignUp = () => {
   const navigation = useNavigation();
