@@ -21,10 +21,10 @@ const WelcomeScreen = () => {
         source={require('../../assets/images/welcomeScreen.png')}
         style={styles.imageContainer}>
         <View style={{flex: 1}}>
-          {/* <Image
+          <Image
             source={require('../../assets/images/tptLogo.png')}
             style={styles.logo}
-          /> */}
+          />
         </View>
         <View style={styles.welcomeTextStyle}>
           <Text style={styles.welcomeText}>Welcome to the Tirupati</Text>

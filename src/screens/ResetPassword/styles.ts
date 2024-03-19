@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     paddingTop: 20,
     color: '#151615',
+    marginHorizontal: 20,
   },
   resetPassowrd: {
     fontFamily: 'Rubik',
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     paddingTop: 20,
     color: '#989898',
-    paddingHorizontal: 20,
+    marginHorizontal: 20,
   },
   emailText: {
     fontFamily: 'Rubik',

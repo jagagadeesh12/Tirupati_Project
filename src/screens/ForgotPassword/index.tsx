@@ -18,11 +18,11 @@ const ForgotPassword = () => {
               source={require('../../assets/images/tptLogo.png')}
               style={styles.logoStyle}
             />
-            <Text style={styles.loginText}> Forgot password</Text>
+          </View>
+          <Text style={styles.loginText}> Forgot password</Text>
             <Text style={styles.resetPassowrd}>
               Please enter your email to reset the password
             </Text>
-          </View>
           <View style={{marginTop: 40}}>
             <Text style={styles.emailText}>Email</Text>
             <InputText
@@ -33,7 +33,7 @@ const ForgotPassword = () => {
             />
           </View>
 
-          <View style={{marginTop: 25, marginHorizontal: 20}}>
+          <View style={{marginTop: 150, marginHorizontal: 20}}>
             <ButtonLoader
               label={'Reset Password'}
               onPress={() => navigation.navigate(SCREENS.RESET_PASSWORD)}

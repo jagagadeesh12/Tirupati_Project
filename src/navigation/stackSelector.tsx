@@ -1,16 +1,31 @@
-import React, {useEffect} from 'react';
-// import SplashScreen from 'react-native-splash-screen';
+import {View, Text} from 'react-native';
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {SCREENS, SignIn, SignUp, WelcomeScreen} from '../screens';
+import BottomTab from './BottomTab';
+import ForgotPassword from '../screens/ForgotPassword';
+import ResetPassword from '../screens/ResetPassword';
 
-import PreLogInScreen from './preLogInScreen';
-import MainStack from './mainStack';
-import {useAuth} from '../hooks';
+const Stack = createStackNavigator();
 
-const StackSelector = () => {
-  const isSignIn = useAuth().isSignIn;
-  if (isSignIn) {
-    return <MainStack />;
-  }
-  return <PreLogInScreen />;
-};
+function StackSelector() {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name={SCREENS.WELCOME_SCREENS} component={WelcomeScreen} />
+      <Stack.Screen name={SCREENS.SIGN_IN} component={SignIn} />
+      <Stack.Screen name={SCREENS.SIGN_UP} component={SignUp} />
+      <Stack.Screen name={SCREENS.FORGOT_PASSWORD} component={ForgotPassword} />
+      <Stack.Screen name={SCREENS.RESET_PASSWORD} component={ResetPassword} />
+      <Stack.Screen name={SCREENS.FEED} component={BottomTab} />
+    </Stack.Navigator>
+  );
+}
 
 export default StackSelector;
+
+{
+  /* <Stack.Navigator>
+      <Stack.Screen name={SCREENS.SIGN_IN} component={SignIn} />
+      <Stack.Screen name={SCREENS.FEED} component={BottomTab} />
+    </Stack.Navigator> */
+}

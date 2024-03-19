@@ -17,11 +17,11 @@ export const styles = StyleSheet.create({
   headerStyles: {
     // flexDirection: 'row',
     alignItems: 'center',
-
+    backgroundColor: 'green',
     // marginLeft: 10,
     // alignItems:'center',
     // justifyContent: 'center',
-    flex: 1,
+    // flex: 1,
   },
   name: {
     fontSize: 14,
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     // verticalAlign:'middle',
     // marginVertical:10
   },
-  primaryText:{
+  primaryText: {
     fontSize: 14,
     fontWeight: '500',
     color: APP_COLOR.text,
@@ -48,11 +48,11 @@ export const styles = StyleSheet.create({
     marginTop: 2,
   },
   perchTextLogo: {
-    fontFamily: 'Pacifico-Regular',
+    // fontFamily: 'Pacifico-Regular',
     fontWeight: '400',
     fontSize: 24,
-    color: APP_COLOR.text,
-    textAlign:'center',
+    color: 'black',
+    textAlign: 'center',
     // marginHorizontal: 30,
     marginRight: 40,
   },

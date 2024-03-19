@@ -5,7 +5,8 @@ import {CustomCheckbox} from '../../components';
 import ButtonLoader from '../../components/ButtonLoader';
 import InputText from '../../components/InputText';
 import {useNavigation} from '@react-navigation/native';
-import {SCREENS} from '..';
+import {SCREENS, SignUp} from '..';
+import BottomTab from '../../navigation/BottomTab';
 
 const SignIn = () => {
   const navigation = useNavigation();
@@ -56,10 +57,12 @@ const SignIn = () => {
               <Text style={styles.forgetPassword}>Forget Password?</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            onPress={() => navigation.navigate(SCREENS.BOTTOM_TAB_SCREENS)}>
+          <TouchableOpacity>
             <View style={{marginTop: 25, marginHorizontal: 20}}>
-              <ButtonLoader label={'Login'} onPress={function (): void {}} />
+              <ButtonLoader
+                label={'Login'}
+                onPress={() => navigation.navigate(SCREENS.FEED)}
+              />
             </View>
           </TouchableOpacity>
           {/* <View style={styles.viewStyle}>
@@ -71,7 +74,7 @@ const SignIn = () => {
       </View>
       <View style={styles.signUpView}>
         <Text style={styles.accountText}>Don't have an account?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.SIGN_UP)}>
+        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
           <Text style={styles.signUpText}>Sign Up</Text>
         </TouchableOpacity>
       </View>
