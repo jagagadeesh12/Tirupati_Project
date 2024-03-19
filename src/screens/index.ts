@@ -6,7 +6,6 @@ import SignUp from './SignUP';
 import ForgotPassword from './ForgotPassword';
 import ResetPassword from './ResetPassword';
 import Feed from './feed';
-import Feed from '../screens/feed';
 import InternalJob from './JobPosting';
 import Events from './Event';
 
@@ -15,7 +14,6 @@ export {default as SignIn} from './signIn';
 export {default as Loader} from './loader';
 export {default as WelcomeScreen} from './welcom';
 export {default as SignUp} from './SignUP';
-
 export {default as Feed} from './feed';
 
 export const SCREENS: {[key: string]: never} = {
