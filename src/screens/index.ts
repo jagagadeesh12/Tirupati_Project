@@ -1,6 +1,5 @@
 import {IListOfScreens} from '../types';
 import Loader from './loader';
-import OnBoard from './onBoarding';
 import SignIn from './signIn';
 import WelcomeScreen from './welcom';
 import SignUp from './SignUP';
