@@ -6,6 +6,7 @@ import SignUp from './SignUP';
 import ForgotPassword from './ForgotPassword';
 import ResetPassword from './ResetPassword';
 import Feed from './feed';
+import Feed from '../screens/feed';
 import InternalJob from './JobPosting';
 import Events from './Event';
 
