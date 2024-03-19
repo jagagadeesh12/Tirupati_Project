@@ -4,6 +4,7 @@ import {ApolloProvider} from '@apollo/client';
 import {SCREENS, STACKED_SCREENS} from '../screens';
 import {useMainStack} from '../hooks';
 import {AppSetup} from '../template';
+import BottomTab from './BottomTab';
 
 const Stack = createStackNavigator();
 
@@ -20,15 +21,15 @@ const MainStack = () => {
       <Stack.Navigator
         initialRouteName={SCREENS.BOTTOM_TAB}
         screenOptions={{
-          headerShown: false,
+          headerShown: true,
         }}>
         <Stack.Screen
           name={SCREENS.BOTTOM_TAB}
           component={BottomTab}
           options={{
-            headerShown: false,
+            headerShown: true,
           }}
-        /> 
+        />
         {STACKED_SCREENS.map(item => (
           <Stack.Screen
             key={item.name}

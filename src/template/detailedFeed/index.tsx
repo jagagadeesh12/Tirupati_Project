@@ -2,10 +2,10 @@
 import {View, Text, Image, Dimensions} from 'react-native';
 import React from 'react';
 import Header from './header';
-import {IFeed} from '../../screens/feed/dummy';
+import {IFeed} from '../../screens/BottomTab/Feed/dummy';
 import LikeAndComment from '../../components/likeAndComment';
 import ProfileStack from './ProfileStack';
-import feed from '../../screens/feed';
+import feed from '../../screens/BottomTab/Feed';
 import {LikeCommentAndRepost} from '../../components';
 
 const {width} = Dimensions.get('screen');

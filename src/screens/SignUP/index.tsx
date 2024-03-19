@@ -3,8 +3,11 @@ import React from 'react';
 import InputText from '../../components/InputText';
 import ButtonLoader from '../../components/ButtonLoader';
 import styles from './styles';
+import {useNavigation} from '@react-navigation/native';
+import { SCREENS } from '..';
 
 const SignUp = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={{flex: 1}}>
@@ -40,7 +43,10 @@ const SignUp = () => {
             />
           </View>
           <View style={{marginTop: 25, marginHorizontal: 20}}>
-            <ButtonLoader label={'Signup'} onPress={function (): void {}} />
+            <ButtonLoader
+              label={'Signup'}
+              onPress={() => navigation.navigate(SCREENS.SIGN_IN)}
+            />
           </View>
         </View>
       </View>

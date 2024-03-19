@@ -25,14 +25,14 @@ const AppHeader = ({
   return (
     <View style={styles.AppHeader}>
       <View style={styles.AppHeaderStyles}>
-        <TouchableOpacity onPress={onPressProfile}>
-          <Avatar
-            imageSource={updatedUrl}
-            width={45}
-            height={45}
-            borderRadius={50}
-          />
-        </TouchableOpacity>
+        {/* <TouchableOpacity onPress={onPressProfile}> */}
+        <Avatar
+          imageSource={updatedUrl}
+          width={40}
+          height={40}
+          borderRadius={50}
+        />
+        {/* </TouchableOpacity> */}
         <View style={styles.headerStyles}>
           {/* <View style={{marginTop: 4}}>
             <Text style={styles.primaryText}>Hi,</Text>
@@ -41,7 +41,7 @@ const AppHeader = ({
               {name && name.length > 7 && '...'}
             </Text>
           </View> */}
-          <Text style={styles.perchTextLogo}>Perch</Text>
+          <Text style={styles.perchTextLogo}>Tirupati</Text>
         </View>
       </View>
 

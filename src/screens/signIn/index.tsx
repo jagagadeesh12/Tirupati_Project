@@ -6,6 +6,7 @@ import ButtonLoader from '../../components/ButtonLoader';
 import InputText from '../../components/InputText';
 import {useNavigation} from '@react-navigation/native';
 import {SCREENS} from '..';
+import BottomTab from '../../navigation/BottomTab';
 
 const SignIn = () => {
   const navigation = useNavigation();
@@ -56,10 +57,12 @@ const SignIn = () => {
               <Text style={styles.forgetPassword}>Forget Password?</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            onPress={() => navigation.navigate(SCREENS.BOTTOM_TAB_SCREENS)}>
+          <TouchableOpacity>
             <View style={{marginTop: 25, marginHorizontal: 20}}>
-              <ButtonLoader label={'Login'} onPress={function (): void {}} />
+              <ButtonLoader
+                label={'Login'}
+                onPress={() => navigation.navigate(SCREENS.FEED)}
+              />
             </View>
           </TouchableOpacity>
           {/* <View style={styles.viewStyle}>

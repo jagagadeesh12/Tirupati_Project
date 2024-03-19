@@ -6,47 +6,35 @@ import WelcomeScreen from './welcom';
 import SignUp from './SignUP';
 import ForgotPassword from './ForgotPassword';
 import ResetPassword from './ResetPassword';
-import { from } from '@apollo/client';
+import Feed from './Feed';
+import InternalJob from './JobPosting';
+import Events from './Event';
 
 export {default as OnBoard} from './onBoarding';
 export {default as SignIn} from './signIn';
 export {default as Loader} from './loader';
 export {default as WelcomeScreen} from './welcom';
 export {default as SignUp} from './SignUP';
-export {default as ForgotPassword} from './ForgotPassword';
-export {default as ResetPassword} from './ResetPassword';
+// export {default as ForgotPassword} from './ForgotPassword';
+// export {default as ResetPassword} from './ResetPassword';
+export {default as Feed} from './Feed';
 
 export const SCREENS: {[key: string]: never} = {
-  ONBOARD: 'OnBoard',
+  FEED: 'Feed',
   SIGN_IN: 'SignIn',
   LOADER: 'Loader',
   WELCOME_SCREENS: 'WelcomeScreen',
   SIGN_UP: 'SignUp',
   FORGOT_PASSWORD: 'ForgotPassword',
   RESET_PASSWORD: 'ResetPassword',
+  INTERNAL_JOB: 'InternalJob',
+  EVENT: 'Events',
 };
 
 export const STACKED_SCREENS: IListOfScreens[] = [
   {
-    name: SCREENS.NOTIFICATION,
-    component: Notification,
-  },
-  {
-    name: SCREENS.CREATE_FEED,
-    component: CreateFeed,
-  },
-  {
-    name: SCREENS.SEE_MORE_HOLIDAYS,
-    component: SeeMoreHolidays,
-  },
-
-  {
-    name: SCREENS.ADD_SKILLTYPE,
-    component: AddSkillType,
-  },
-  {
-    name: SCREENS.FEED_WITH_COMMENTS,
-    component: FeedWithComment,
+    name: SCREENS.FEED,
+    component: Feed,
   },
 ];
 
@@ -77,6 +65,10 @@ export const PRE_LOGIN_STACK: IListOfScreens[] = [
     component: ResetPassword,
   },
   {
+    name: SCREENS.EVENT,
+    component: Events,
+  },
+  {
     name: SCREENS.LOADER,
     component: Loader,
   },
@@ -97,7 +89,11 @@ export const BOTTOM_TAB_SCREENS: IListOfScreens[] = [
     component: Feed,
   },
   {
-    name: SCREENS.INTERNAL_JOBS,
-    component: InternalJobs,
+    name: SCREENS.INTERNAL_JOB,
+    component: InternalJob,
   },
+  // {
+  //   name: SCREENS.INTERNAL_JOBS,
+  //   component: InternalJobs,
+  // },
 ];
