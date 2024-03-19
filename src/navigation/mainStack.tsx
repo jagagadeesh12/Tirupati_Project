@@ -1,8 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {ApolloProvider} from '@apollo/client';
-
-import BottomTab from './bottomTab';
 import {SCREENS, STACKED_SCREENS} from '../screens';
 import {useMainStack} from '../hooks';
 import {AppSetup} from '../template';
