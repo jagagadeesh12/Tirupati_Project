@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Pressable } from 'react-native';
-import { APP_COLOR, COMMON_COLOR } from '../../../theme/color';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+  Pressable,
+} from 'react-native';
+import {APP_COLOR, COMMON_COLOR} from '../../../theme/color';
 
 const width = Dimensions.get('screen').width;
 
@@ -9,7 +16,7 @@ interface AboutProps {
   textStyle?: {};
 }
 
-const SeeMore: React.FC<AboutProps> = ({ text, textStyle }) => {
+const SeeMore: React.FC<AboutProps> = ({text, textStyle}) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
   const handleReadMoreClick = () => {
@@ -17,12 +24,16 @@ const SeeMore: React.FC<AboutProps> = ({ text, textStyle }) => {
   };
 
   // Calculate number of lines based on text length
-  const numberOfLines = text.length > 120 ? (expanded ? undefined : 2) : undefined;
+  const numberOfLines =
+    text.length > 120 ? (expanded ? undefined : 2) : undefined;
 
   return (
     <View style={styles.container}>
-      <View style={{ flex: 1, flexWrap: 'wrap' }}>
-        <Text numberOfLines={numberOfLines} ellipsizeMode="tail" style={{ ...styles.detail, ...textStyle }}>
+      <View style={{flex: 1, flexWrap: 'wrap'}}>
+        <Text
+          numberOfLines={numberOfLines}
+          ellipsizeMode="tail"
+          style={{...styles.detail, ...textStyle}}>
           {text}
         </Text>
         {/* </View> */}
@@ -43,7 +54,7 @@ const styles = StyleSheet.create({
   },
   detail: {
     // Add detail text styles if needed
-    width:'100%',
+    width: '100%',
     color: 'black',
   },
   readMore: {

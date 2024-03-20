@@ -307,19 +307,19 @@ export interface IJobCardComponent {
   //   hiringManager: string;
   //   expirationDate: string;
   // };
-  // id: number;
-  // jobTitle: string;
-  // jobLocation: string;
-  // experience: string;
-  // jobType: string;
-  // jobDescription: string;
-  // jobQualification: string;
-  // projectName: string;
-  // responsibilities: string;
-  // fixedBudget: string;
-  // variableBudget: string;
-  // manager: string;
-  // expireDate: string;
+  id: number;
+  jobTitle: string;
+  jobLocation: string;
+  experience: string;
+  jobType: string;
+  jobDescription: string;
+  jobQualification: string;
+  projectName: string;
+  responsibilities: string;
+  fixedBudget: string;
+  variableBudget: string;
+  manager: string;
+  expireDate: string;
 }
 export interface LeaveManagementComponent {
   item: {
