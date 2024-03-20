@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const Events = () => {
+const Services = () => {
   return (
     <View>
-      <Text>Events</Text>
+      <Text>Services</Text>
     </View>
   );
 };
 
-export default Events;
+export default Services;

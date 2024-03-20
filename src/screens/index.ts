@@ -8,13 +8,18 @@ import ResetPassword from './ResetPassword';
 import Feed from './feed';
 import InternalJob from './JobPosting';
 import Events from './Event';
+import PlaceAround from './PlacesAround';
+import Services from './Services';
+import { from } from '@apollo/client';
 
-export {default as OnBoard} from './onBoarding';
+
 export {default as SignIn} from './signIn';
 export {default as Loader} from './loader';
 export {default as WelcomeScreen} from './welcom';
 export {default as SignUp} from './SignUP';
 export {default as Feed} from './feed';
+export {default as PlaceAround} from './PlacesAround';
+export { default as Services} from './Services';
 
 export const SCREENS: {[key: string]: never} = {
   FEED: 'Feed',
@@ -26,6 +31,8 @@ export const SCREENS: {[key: string]: never} = {
   RESET_PASSWORD: 'ResetPassword',
   INTERNAL_JOB: 'InternalJob',
   EVENT: 'Events',
+  PLACE_AROUND: 'PlaceAround',
+  SERVICES: 'Services',
 };
 
 export const STACKED_SCREENS: IListOfScreens[] = [

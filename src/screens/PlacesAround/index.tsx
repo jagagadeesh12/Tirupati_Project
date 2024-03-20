@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const Events = () => {
+const PlaceAround = () => {
   return (
     <View>
-      <Text>Events</Text>
+      <Text>PlaceAround</Text>
     </View>
   );
 };
 
-export default Events;
+export default PlaceAround;
