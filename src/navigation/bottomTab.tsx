@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Feed from '../../src/screens/feed';
 import InternalJob from '../screens/JobPosting';
 import {Image} from 'react-native';
-import { PlaceAround, Services } from '../screens';
+import {PlaceAround, Services} from '../screens';
 import Events from '../screens/Event';
 
 const Tab = createBottomTabNavigator();
@@ -16,9 +16,10 @@ const BottomTab = () => {
         component={Feed}
         options={{
           headerShown: false,
+          // eslint-disable-next-line react/no-unstable-nested-components
           tabBarIcon: ({color, size}) => (
             <Image
-              source={require('../assets/images/Feed.png')}
+              source={require('../assets/images/feed.png')}
               style={{width: 20, height: 20, tintColor: '#EAC953'}}
             />
           ),
