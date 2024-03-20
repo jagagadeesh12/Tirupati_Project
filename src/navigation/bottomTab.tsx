@@ -59,7 +59,7 @@ const BottomTab = () => {
           tabBarIcon: ({color, size}) => (
             <Image
               source={require('../assets/images/Events.png')}
-              style={{width: 40, height: 40, tintColor: '#000000'}}
+              style={{width: 20, height: 20, tintColor: '#EE8659'}}
             />
           ),
         }}
