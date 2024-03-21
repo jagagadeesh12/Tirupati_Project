@@ -8,25 +8,6 @@ import {SCREENS} from '..';
 import axios from 'axios';
 
 const SignUp = () => {
-  const [userName, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSignup = async () => {
-    try {
-      const response = await axios.post(
-        ' http://13.201.40.122:8888/api/Registration/registration',
-        {
-          userName,
-          email,
-          password,
-        },
-      );
-      console.log(response.data); // Assuming your API returns some data upon successful signup
-    } catch (error) {
-      console.error('Error signing up:', error);
-    }
-  };
   const navigation = useNavigation();
   return (
     <SafeAreaView style={{flex: 1}}>
