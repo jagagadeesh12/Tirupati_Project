@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     height: SCREEN_WIDTH,
     //it depends on parent container 20 padding each side
-    // width: SCREEN_WIDTH - 40,
+    // width:  - 40,
     // height: SCREEN_WIDTH - 40,
     // height: 805 * (164 / dimensions.height),
   },
