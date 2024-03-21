@@ -3,14 +3,12 @@ import {APP_COLOR} from '../../types/Colors';
 
 const styles = StyleSheet.create({
   contentContainer: {
-    marginHorizontal: 20,
-    marginTop: 20,
+    borderColor: 'whitesmoke',
+    borderWidth: 2,
     padding: 10,
     borderRadius: 8,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: 'white',
     flexDirection: 'column',
-    // flex: 1,
-    // flexGrow: 1,
   },
   jobTitle: {
     fontFamily: 'Rubik',
@@ -21,7 +19,7 @@ const styles = StyleSheet.create({
   jobDetailsView: {
     flexDirection: 'row',
     alignItems: 'center',
-     //justifyContent: '',
+    //justifyContent: '',
     marginTop: 5,
   },
   jobDetails: {
@@ -77,8 +75,7 @@ const styles = StyleSheet.create({
     width: 4,
     borderRadius: 40,
     backgroundColor: APP_COLOR.PrimaryColor,
- 
-  }
+  },
 });
 
 export default styles;

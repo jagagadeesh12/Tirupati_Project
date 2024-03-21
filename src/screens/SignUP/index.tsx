@@ -5,8 +5,28 @@ import ButtonLoader from '../../components/ButtonLoader';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import {SCREENS} from '..';
+import axios from 'axios';
 
 const SignUp = () => {
+  const [userName, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignup = async () => {
+    try {
+      const response = await axios.post(
+        ' http://13.201.40.122:8888/api/Registration/registration',
+        {
+          userName,
+          email,
+          password,
+        },
+      );
+      console.log(response.data); // Assuming your API returns some data upon successful signup
+    } catch (error) {
+      console.error('Error signing up:', error);
+    }
+  };
   const navigation = useNavigation();
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -23,9 +43,8 @@ const SignUp = () => {
             <Text style={styles.emailText}>Username</Text>
             <InputText
               placeholder={'Enter your username'}
-              handleOnchange={function (e: string): void {}}
+              handleOnchange={() => {}}
               keyboardType="default"
-              value={''}
             />
             <Text style={styles.emailText}>Email</Text>
             <InputText
@@ -45,7 +64,7 @@ const SignUp = () => {
           <View style={{marginTop: 25, marginHorizontal: 20}}>
             <ButtonLoader
               label={'Signup'}
-              onPress={() => navigation.navigate(SCREENS.SIGN_IN)}
+              onPress={handleSignup => navigation.navigate(SCREENS.SIGN_IN)}
             />
           </View>
         </View>
@@ -56,51 +75,37 @@ const SignUp = () => {
 
 export default SignUp;
 
-// import {View, Text, Image, SafeAreaView, Alert} from 'react-native';
+// import {View, Text, Image, SafeAreaView} from 'react-native';
 // import React, {useState} from 'react';
 // import InputText from '../../components/InputText';
 // import ButtonLoader from '../../components/ButtonLoader';
 // import styles from './styles';
 // import {useNavigation} from '@react-navigation/native';
 // import {SCREENS} from '..';
+// import axios from 'axios';
 
 // const SignUp = () => {
-//   const navigation = useNavigation();
-//   const [username, setUsername] = useState('');
+//   const [userName, setUserName] = useState('');
 //   const [email, setEmail] = useState('');
 //   const [password, setPassword] = useState('');
+//   const navigation = useNavigation();
 
-//   const handleSignUp = async () => {
+//   const handleSignup = async () => {
 //     try {
-//       const response = await fetch(
+//       const response = await axios.post(
 //         'http://13.201.40.122:8888/api/Registration/registration',
-
 //         {
-//           method: 'POST',
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//           body: JSON.stringify({
-//             userName: username,
-//             email: email,
-//             password: password,
-//             isActive: 1,
-//           }),
+//           userName: userName,
+//           email: email,
+//           password: password,
+//           isActive: 1, // Assuming isActive is always 1 for new registrations
 //         },
 //       );
-//       console.log('singnup responae', response);
-
-//       if (!response.ok) {
-//         throw new Error('Sign up failed');
-//       }
-
-//       // Optionally, you can handle successful sign up here
-//       // For example, navigate to another screen
+//       console.log(response.data); // Log response data upon successful signup
+//       // Assuming you want to navigate to the sign-in screen upon successful signup
 //       navigation.navigate(SCREENS.SIGN_IN);
-//       Alert.alert('Success', 'Sign up successful!');
 //     } catch (error) {
 //       console.error('Error signing up:', error);
-//       Alert.alert('Error', 'Failed to sign up. Please try again later.');
 //     }
 //   };
 
@@ -119,9 +124,8 @@ export default SignUp;
 //             <Text style={styles.emailText}>Username</Text>
 //             <InputText
 //               placeholder={'Enter your username'}
-//               handleOnchange={setUsername}
+//               handleOnchange={setUserName}
 //               keyboardType="default"
-//               value={username}
 //             />
 //             <Text style={styles.emailText}>Email</Text>
 //             <InputText
@@ -136,10 +140,11 @@ export default SignUp;
 //               handleOnchange={setPassword}
 //               keyboardType="default"
 //               value={password}
+//               secureTextEntry={true}
 //             />
 //           </View>
 //           <View style={{marginTop: 25, marginHorizontal: 20}}>
-//             <ButtonLoader label={'Signup'} onPress={handleSignUp} />
+//             <ButtonLoader label={'Signup'} onPress={handleSignup} />
 //           </View>
 //         </View>
 //       </View>

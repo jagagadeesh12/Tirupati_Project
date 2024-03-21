@@ -2,6 +2,7 @@ import {View, Text, ScrollView} from 'react-native';
 import React from 'react';
 import JobsCard from '../../components/jobsCard';
 import {FlatList} from 'react-native-gesture-handler';
+import WrapperContainer from '../../components/WrapperContainer/WrapperContainer';
 
 const InternalJob = () => {
   const jobData = [
@@ -177,23 +178,25 @@ const InternalJob = () => {
     },
   ];
   const renderItem = ({item}) => (
-    <View>
-      <JobsCard
-        id={item.id}
-        jobTitle={item.title}
-        jobLocation={item.location}
-        experience={item.experience}
-        jobType={item.type}
-        jobDescription={item.description}
-        jobQualification={item.jobQualification}
-        projectName={item.projectName}
-        responsibilities={item.responsibilities}
-        fixedBudget={item.fixedBudget}
-        variableBudget={item.variableBudget}
-        manager={item.manager}
-        expireDate={item.expireDate} // Add other properties as needed
-      />
-    </View>
+    <WrapperContainer>
+      <View>
+        <JobsCard
+          id={item.id}
+          jobTitle={item.title}
+          jobLocation={item.location}
+          experience={item.experience}
+          jobType={item.type}
+          jobDescription={item.description}
+          jobQualification={item.jobQualification}
+          projectName={item.projectName}
+          responsibilities={item.responsibilities}
+          fixedBudget={item.fixedBudget}
+          variableBudget={item.variableBudget}
+          manager={item.manager}
+          expireDate={item.expireDate} // Add other properties as needed
+        />
+      </View>
+    </WrapperContainer>
   );
 
   return (
